@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p{
+    font-size: 24px;
+}
+
+.nav__wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: rgb(230, 150, 1);
+}
+
+.nav__img{
+width: 100px;
+}
+
+.nav__button{
+    padding: 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(14, 116, 225);
+}
+
+.nav__button--text{
+    text-decoration: none;
+    color: white;
+}
+
+.search__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    background-color: #242424;
+}
+
+.search__bar,
+.nav__dropdown{
+    padding:12px 8px;
+    border: 3px solid rgb(14, 116, 225);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.landing__img{
+    width: 100%;
+    opacity: 15%;
+    height: 655px;
+    content: url('https://image.tmdb.org/t/p/original/vFJAiBNUlzEVa54mXgHGumr1z1s.jpg');
+    object-position: bottom;
+    object-fit: cover;
+    position: absolute;
+    display: grid;
+}
+
+.landing__row{
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing__card,
+.main__card{
+    padding: 12px;
+    border: 2px solid black;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px black;
+}
+
+.footer__wrapper{
+    height: 20vh;
+}

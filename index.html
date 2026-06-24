@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Digimon Database</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
 </head>
 <body>
-    
+    <nav>
+        <div class="container">
+            <div class="row">
+                <div class="nav__wrapper">
+                    <div class="nav__logo">
+                        <img class="nav__img" src="https://i.redd.it/lti6z5yqm8h31.png" alt="logo">
+                    </div>
+                    <div class="nav__filter">
+                        <select name="" id="api__dropdown" onchange="rankDisplay(event)" class="nav__dropdown">
+                            <option value="">~ Select an Item ~</option>
+                            <option value="rookie">Rookies</option>
+                            <option value="champion">Champions</option>
+                            <option value="ultimate">Ultimates</option>
+                            <option value="mega">Megas</option>
+                        </select>
+                        <button class="nav__button">
+                            <a class="nav__button--text" href="#main">GO</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section id="search">
+        <div class="container">
+            <div class="row">
+                <div class="search__wrapper">
+                    <input class="search__bar" type="text" id="searchInput" placeholder="Search by name..." oninput="onSearchChange(event)">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="landing">
+        <img class="landing__img" src="https://image.tmdb.org/t/p/original/vFJAiBNUlzEVa54mXgHGumr1z1s.jpg" alt="">
+        <div class="container">
+            <div class="landing__row">
+                <div class="landing__card">
+                    <h2>DIGIMON NAME:</h2>
+                    <p></p>
+                    <img src="">
+                    <h2>Rank:</h2>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="main">
+        <div class="main__container">
+            <div class="main__row">
+                <div class="main__card">
+                    <h2>DIGIMON NAME:</h2>
+                    <p></p>
+                    <img src="">
+                    <h2>Rank:</h2>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="footer__wrapper">
+
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
