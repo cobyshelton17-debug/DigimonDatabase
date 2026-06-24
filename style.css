@@ -31,13 +31,14 @@ width: 100px;
 .nav__button--text{
     text-decoration: none;
     color: white;
+    font-size: 16px;
 }
 
 .search__wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 15vh;
+    height: 10vh;
     background-color: #242424;
 }
 
@@ -47,36 +48,47 @@ width: 100px;
     border: 3px solid rgb(14, 116, 225);
     border-radius: 12px;
     text-align: center;
+    font-size: 16px;
 }
 
-.landing__img{
-    width: 100%;
-    opacity: 15%;
-    height: 655px;
-    content: url('https://image.tmdb.org/t/p/original/vFJAiBNUlzEVa54mXgHGumr1z1s.jpg');
-    object-position: bottom;
-    object-fit: cover;
-    position: absolute;
-    display: grid;
-}
-
-.landing__row{
-    padding: 100px 20px;
+.landing__row,
+.main__row{
+    padding: 90px 20px 10px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .landing__card,
 .main__card{
     padding: 12px;
     border: 2px solid black;
-    width: 60%;
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 12px;
     box-shadow: 5px 5px 10px black;
+}
+
+.main__card{
+    margin: 16px 12px;
+}
+
+.footer__box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    background-color: #242424;
+}
+
+.button--text{
+    color: white;
+    text-decoration: none;
 }
 
 .footer__wrapper{
