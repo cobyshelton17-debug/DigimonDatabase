@@ -3,7 +3,27 @@
 // https://external-preview.redd.it/my-latest-digimon-design-the-9-crests-v0-UJkTm0XpzKERIKyMaW_qK4wJ12h5iIBfiiNyVG21P50.jpg?width=640&crop=smart&auto=webp&s=1abbea5289c9a750f8aa61ca0a41be4f5c443e62
 // use this image for the loading state
 
+document.addEventListener("DOMContentLoaded", function() { getData();
 
+});
+
+async function getData() {
+    const data = await fetch(`https://digimon-api.vercel.app/api/digimon`)
+    const newData = await data.json();
+    const dataListEl = document.querySelector(".landing__row");
+    dataListEl.innerHTML = newData
+    .map(
+        (name) =>
+            `<div class="landing__card">
+                    <h2>DIGIMON NAME:</h2>
+                    <p>${name.name}</p>
+                    <img src="${name.img}" alt="image placeholder">
+                    <h2>Rank:</h2>
+                    <p>${name.level}</p>
+                </div>`
+    )
+    .join("");
+};
 
 async function onSearchChange(event) {
     const name = event.target.value;
@@ -29,10 +49,9 @@ async function rankDisplay(event){
     const level = event.target.value;
     const ranks = await fetch (`https://digimon-api.vercel.app/api/digimon/level/${level}`);
     const ranksData = await ranks.json();
-    const rankListEl = document.querySelector(".main__row");
+    const rankListEl = document.querySelector(".landing__row");
     console.log(ranksData)
     rankListEl.innerHTML = ranksData
-    .slice(0, 6)
     .map(
         (rank) => 
         `<div class="main__card">
