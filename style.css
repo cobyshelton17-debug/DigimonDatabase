@@ -62,6 +62,7 @@ width: 100px;
     align-items: center;
     border-radius: 12px;
     box-shadow: 5px 5px 10px black;
+    margin: 12px;
 }
 
 .footer__box{
@@ -81,4 +82,8 @@ width: 100px;
 
 .footer__wrapper{
     height: 20vh;
+}
+
+@media {
+    
 }
