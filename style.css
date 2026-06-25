@@ -84,7 +84,7 @@ width: 100px;
     height: 20vh;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 400px) {
     .landing__card{
         width: 275px;
     }

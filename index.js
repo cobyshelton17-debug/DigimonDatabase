@@ -24,7 +24,7 @@ function displayDigimon(digimonList){
             `<div class="landing__card">
                     <h2>DIGIMON NAME:</h2>
                     <p>${digimon.name}</p>
-                    <img class"landing__img" src="${digimon.img}" alt="image placeholder">
+                    <img class="landing__img" src="${digimon.img}" alt="image placeholder">
                     <h2>Rank:</h2>
                     <p>${digimon.level}</p>
                 </div>`
