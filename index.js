@@ -20,13 +20,13 @@ function displayDigimon(digimonList){
     
     dataListEl.innerHTML = digimonList
     .map(
-        (name) =>
+        (digimon) =>
             `<div class="landing__card">
                     <h2>DIGIMON NAME:</h2>
-                    <p>${name.name}</p>
-                    <img src="${name.img}" alt="image placeholder">
+                    <p>${digimon.name}</p>
+                    <img class"landing__img" src="${digimon.img}" alt="image placeholder">
                     <h2>Rank:</h2>
-                    <p>${name.level}</p>
+                    <p>${digimon.level}</p>
                 </div>`
     )
     .join("");
