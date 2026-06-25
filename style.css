@@ -21,11 +21,9 @@ p{
 width: 100px;
 }
 
-.nav__button{
-    padding: 12px;
-    border-radius: 50%;
-    border: none;
-    background-color: rgb(14, 116, 225);
+.nav__text{
+    font-size: 24px;
+    color:rgb(14, 116, 225);
 }
 
 .search__wrapper{
@@ -84,7 +82,7 @@ width: 100px;
     height: 20vh;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
     .landing__card{
         width: 275px;
     }

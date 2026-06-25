@@ -1,8 +1,5 @@
 // https://digimon-api.vercel.app/api/digimon
 
-// https://external-preview.redd.it/my-latest-digimon-design-the-9-crests-v0-UJkTm0XpzKERIKyMaW_qK4wJ12h5iIBfiiNyVG21P50.jpg?width=640&crop=smart&auto=webp&s=1abbea5289c9a750f8aa61ca0a41be4f5c443e62
-// use this image for the loading state
-
 document.addEventListener("DOMContentLoaded", function() { getData();});
 
 let allDigimon = [];
@@ -41,10 +38,23 @@ function onSearchChange(event) {
     displayDigimon(filteredDigimon);
 }
 
-async function rankDisplay(event){
-    const level = event.target.value;
-    const ranks = await fetch (`https://digimon-api.vercel.app/api/digimon/level/${level}`);
-    const ranksData = await ranks.json();
+const selectElement = document.getElementById('sort-options');
+const itemList = document.getElementById('allDigimon');
 
-    displayDigimon(ranksData);
+selectElement.addEventListener('change', (event) => {
+    const selectedValue = event.target.value;
+    sortItems(selectedValue);
+});
+
+function sortItems(order) {
+    const items = Array.from(itemList.children);
+
+    if (order === 'a-z') {
+        items.sort((a, b) => a.textContent.localeCompare(b.textContent));
+    } else if (order === 'z-a') {
+        items.sort((a, b) => b.textContent.localeCompare(a.textContent));
+    }
+    
+    itemList.innerHTML = '';
+    items.forEach(item => itemList.appendChild(item));
 }
